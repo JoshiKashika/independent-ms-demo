@@ -1,0 +1,21 @@
+export const StaticData = {
+    Brandname: "Independent Financial",
+    getDirectionText:"Get Directions",
+    primaryBlueColor: "#293651",
+    Herotitle : "Independent Financial Locations and ATMs",
+    fillInput: "Please fill out this field",
+    LocatorPageSearchHeading: "Find a Location",
+    LocatorPageSearchSubHeading:"Search by city and state or ZIP code",
+    SearchBranchTabText: "Search by Branch",
+    SearchATMTabText:"Search by ATM",
+    FiltersHeadingText:"Filters",
+    Closed:"Closed",
+    Open24HoursText:"Open 24 Hours",
+    MainSiteIndexUrl:"https://www.independent-bank.com/",
+    LinkedinUrl:"https://www.linkedin.com/company/indfinancial/",
+    TwitterUrl:"https://twitter.com/IndFinancial",
+    InstagramUrl:"https://www.instagram.com/indfinancial/",
+    FacebookUrl:"https://www.facebook.com/IndFinancial",
+    SearchPlaceholder:"e.g., Dallas, TX",
+    MoneyPassAtmLink:"https://www.moneypass.com/atm-locator.html"
+}

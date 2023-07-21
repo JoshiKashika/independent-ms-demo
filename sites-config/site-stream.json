@@ -1,0 +1,25 @@
+{
+    "$id": "site-entity",
+    "filter": {
+      "entityIds": ["global-data"]
+    },
+    "source": "knowledgeGraph",
+    "fields": [
+        "name",
+        "c_headerLogo",
+        "c_topNavigationLinks",
+        "c_mainMenuNavigation",
+        "c_footerLogo",
+        "c_footerLinks",
+        "c_socialLinks",
+        "c_footerDescription",
+        "c_partnerLinks",
+        "c_pCMInvestmentProductsTitle",
+        "c_pCMInvestmentProductsList",
+        "c_faviconImage"
+    ],
+    "localization": {
+      "locales": ["en"],
+      "primary": false
+    }
+  }
