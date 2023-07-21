@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.container{@apply max-w-full md:max-w-[48rem] lg:max-w-[62rem] xl:max-w-[73.125rem] m-auto px-[0.9375rem]}
+.spinner-main {@apply fixed top-0 left-0 w-full h-full bg-white  bg-opacity-70  z-10}
+.spinner-main .SpinnerModal-image {@apply fixed left-2/4 top-2/4 !translate-x-2/4 !translate-y-2/4}
+
+
+.locator-main-content + footer {@apply hidden;}
+.locator-map-wrapper {@apply absolute left-[36.625rem] top-0 right-0 bottom-0;}
+
+.locator-content {@apply flex flex-col w-full relative h-full;}
+
+.locator-content .locator-search-title {@apply text-[1.1875rem] md:text-[1.3125rem] leading-[1.05] md:leading-[1.1] font-bold text-white bg-DarkBlue px-4 py-3  tracking-[0.00625rem];}
+
+.locator-content .locator-searchtitle {@apply text-[.8125rem] leading-5 px-4 bg-DarkBlue text-white tracking-[0.00625rem];}
+
+.locator-content .search-wrapper {@apply bg-DarkBlue pl-4 py-3 flex flex-col sticky top-0 z-10;}
+.locator-content .search-wrapper .search-buttons a{@apply inline-block}
+.search-buttons .primaryBtn:not(.tab-selected):not(:hover){@apply bg-BtnGray;}
+.search-buttons .primaryBtn.tab-selected{@apply hover:bg-orange;}
+.search-buttons .primaryBtn:focus{outline: 0.125rem solid rgba(15,112,240,.6);}
+.search-wrapper .locator-form {@apply flex;}
+.locator-form .search-bar {@apply grow relative;}
+.search-bar > div {@apply mb-0;}
+.search-bar input {@apply h-11 py-2 pl-2.5 pr-11 rounded-none border border-BorderGray outline-none  tracking-[0.00625rem] text-[1.125rem] leading-[1.688rem]  focus:border focus:border-orange;}
+.search-bar input::placeholder { color: #757575;opacity: 1;  }
+.search-bar input:-ms-input-placeholder { color: #757575;}
+.search-bar input::-ms-input-placeholder { color: #757575;}
+
+.search-bar input:focus+button svg{@apply fill-orange}
+.search-bar input:valid+button svg{@apply fill-orange}
+
+.search-bar .search-btn {@apply absolute top-2/4 right-[0.75rem] -translate-y-2/4;}
+.search-bar .search-btn svg{@apply w-[1.25rem] h-[1.25rem]}
+.locator-form .locator-buttons {@apply flex items-center;}
+
+.locator-form .search-bar .pac-container.pac-logo {@apply !top-[43px] !left-0}
+
+/* Google SUggestion */
+.pac-item{@apply p-2.5 text-[1.125rem] leading-[1.375rem] border-0 hover:bg-[#e6e6e6];}
+.pac-item-selected{@apply bg-[rgba(192,206,255,.95)];}
+.pac-item-query{@apply text-[1.125rem] leading-[1.375rem];}
+
+.search-bar .Error-msg{@apply text-[13px] whitespace-nowrap justify-start items-center top-[52px]  absolute left-2/4 -translate-x-2/4 shadow-xl border-opacity-40  flex  gap-1 z-10 bg-white border border-[#808080] p-2.5
+after:absolute after:top-[-7px] after:left-4 after:bg-white after:border after:border-[#808080] after:border-t-0 after:border-l-0 after:inline-block after:p-1.5 after:rotate-[225deg];}
+
+.locator-buttons .loc-btn {@apply px-2 min-w-[2.75rem] h-11 first:mr-px first:h-auto first:relative first:left-[2px] last:ml-px md:last:-mt-1 lg:last:-mt-[2px] ;}
+.locator-buttons .loc-btn img{@apply inline-block;}
+
+.locator-result-wrapper {@apply bg-white;}
+
+.locator-resultsummary {@apply bg-orange p-4 text-[.8125rem] leading-5 font-bold text-white tracking-[0.00625rem];}
+
+.result-list-item h3.location-name {@apply text-[1.375rem] md:text-[1.5rem] leading-6 font-bold mb-4 text-DarkBlue pr-11 ;}
+.result-list-item h3.location-name a{@apply focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm focus:outline-none}
+.result-list .result-list-item {@apply relative py-4 pl-4  border-b border-b-[#aaa] border-l-[0.75rem] border-l-transparent hover:border-l-DarkBlue pr-4;}
+.result-list .result-list-item.fixed-hover{@apply  border-l-[0.75rem] border-l-orange }
+
+.result-list .result-list-item {@apply before:absolute before:left-3 before:text-lg;}
+
+article.location-card {@apply relative;}
+article.location-card .Teaser-miles{@apply text-[13px] leading-5 text-black}
+.location-card .location-info {@apply flex text-[.8125rem] leading-5;}
+.location-card .location-info .location-links a{@apply focus:outline-2 focus:outline-[#82aaf8] focus:outline}
+.hours-details .opentitle {@apply mr-2;}
+
+.hours-details .current-status {@apply font-bold;}
+
+.location-links {@apply text-[1.125rem] leading-6;}
+
+.location-links a {-webkit-box-align: center;-ms-flex-align: center;@apply active:text-black text-orange font-medium underline inline-flex items-center active:after:bg-chevronBlack after:bg-arrowRed after:bg-cover after:bg-no-repeat after:w-[.34375rem] after:h-[.5625rem] after:inline-block after:ml-2 hover:after:translate-x-[.4375rem] after:transition-all after:duration-200 after:ease-in-out hover:no-underline;}
+.location-links a::after {background-position: 50%;}
+
+.location-info .info-left {@apply mr-6 flex flex-col justify-between;}
+.location-info .info-right {@apply flex flex-col;}
+
+.info-right .location-phone {@apply mb-4;}
+.info-right .location-address {@apply mb-4 mr-5;}
+.location-address address {@apply not-italic;}
+
+.location-card .location-row-phone {@apply flex gap-3 before:content-[""] before:bg-phoneBlue before:w-[1.125rem] before:h-[1.125rem] before:bg-cover before:inline-block;}
+.location-card .location-row-address {
+@apply flex gap-3 before:content-[""] before:bg-placeBlue before:w-[.79688rem] before:h-[1.125rem] before:bg-cover before:inline-block before:mt-1;}
+
+.location-card .location-row-phone .Phone-linkWrapper a{@apply text-orange hover:text-orange underline hover:no-underline md:text-black md:no-underline }
+
+.locator-results .locator-initial{@apply pt-4 px-4 pb-[80%]}
+.locator-results .noResults{@apply pt-4 px-4 pb-[80%]}
+.locator-results .noResults p,
+.locator-results .locator-initial div{@apply text-[1.125rem] leading-[1.688rem]  tracking-[0.00625rem]} 
+.locator-results .noResults a,
+.locator-results .locator-initial a{@apply text-orange font-medium underline hover:no-underline active:text-black}
+
+
+/* Locator internal Footer */
+
+.locator-footer .footerTop {@apply flex-col  pb-3 }
+.locator-footer .footerTop .footerNav {@apply grid-cols-2 pb-[2.2rem];}
+.locator-footer .footerTop .footerLogo {@apply mb-[30px] pr-0 w-[9.8125rem] xl:w-[15.625rem] md:ml-0}
+
+.locator-footer .FooterBottom { @apply flex-col pb-[3.75rem];}
+.locator-footer .FooterBottom .copyrightBlock {@apply w-full mb-6;}
+.locator-footer .FooterBottom .FooterTablePart {@apply w-full pl-0;}
+
+/* Filter popup */
+.LocatorFilteOuter{@apply fixed top-0 right-0 left-0 bottom-0 z-10 after:content-[''] after:fixed after:left-0 after:right-0 after:top-0 after:bottom-0 after:bg-black after:bg-opacity-40 invisible opacity-0 ; -webkit-transition: visibility .3s linear,opacity .3s linear;
+transition: visibility .3s linear,opacity .3s linear;}
+.LocatorFiltersWrap{@apply absolute top-0 lg:top-1/2 left-0  lg:right-0 bg-white z-20 w-full lg:max-w-[25rem] m-auto  lg:-translate-y-1/2 px-4 py-2 flex flex-col h-screen lg:h-auto }
+.LocatorFiltersWrap .titleRow{@apply font-primary text-[1.375rem] md:text-2xl leading-6 md:leading-[1.625rem] font-bold text-black border-b border-b-BorderGray relative -mx-4 mb-4 pl-4 px-3 pb-3 tracking-[0.00625rem]}
+.LocatorFiltersWrap .titleRow .closeIcon{@apply absolute right-4 top-[6px] lg:top-[7px]}
+.LocatorFiltersWrap .titleRow .closeIcon svg{@apply w-[13.07px] h-[13.07px] lg:w-[13.1px] lg:h-[13.05px]}
+.LocatorFiltersWrap .titleRow .closeIcon:focus{outline: 0.0625rem dashed #000;}
+.LocatorFiltersWrap .filter-items{@apply h-full}
+.midMain{@apply pl-px flex flex-col h-full}
+.LocatorFiltersWrap .LocatorFilters{@apply mb-4}
+.LocatorFiltersWrap .LocatorFiltersHeading{@apply text-[1.313rem] font-bold text-black leading-[1.438rem] mb-4 tracking-[0.00625rem]}
+.LocatorFilters .LocatorFiltersHeading{@apply mb-[0.8125rem]}
+.LocatorFiltersWrap .LocatorFilters .Filter-select{@apply text-[0.813rem] rounded-[.1875rem] max-w-[12.5rem] mb-[1.25rem] w-full; border: solid 1px #d7d7d7; font-family: arial; -webkit-box-shadow: 0 0.5px 1px 0 rgba(0,0,0,.2); box-shadow: 0 0.5px 1px 0 rgba(0,0,0,.2);}
+
+.LocatorFiltersWrap .LocatorFilters-filterWrapper { @apply grow lg:grow-0}
+.LocatorFiltersWrap .LocatorFilters-filterWrapper .Filter{@apply text-[1.125rem] text-black leading-[1.688rem] font-normal font-primary block mb-[1.25rem] last:mb-0 tracking-[0.1px]}
+.LocatorFiltersWrap .LocatorFilters-filterWrapper .Filter .Filter-checkbox{@apply hidden}
+.LocatorFiltersWrap .Filter-checkbox~.Filter-text{@apply before:content-[''] before:w-[0.875rem] before:h-[0.875rem] before:inline-block before:mr-2 before:border before:border-[#aaa] relative; }
+.Filter-checkbox:checked~.Filter-text:after {content: "";position: absolute;left: 0.3125rem;top: 4px;width: 0.3125rem;height: 0.5625rem;border: 0.0625rem solid #fff;
+border-width: 0 0.125rem 0.125rem 0;-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+.LocatorFiltersWrap .Filter-checkbox:checked~.Filter-text:before {@apply bg-orange border border-orange}
+
+.LocatorFiltersWrap .LocatorFilters-buttons{@apply border-t border-t-BorderGray pt-[0.5rem] px-[0.5rem] -mx-4 lg:pt-2 lg:mt-[1.25rem] flex justify-around }
+.LocatorFiltersWrap .LocatorFilters-button{@apply py-[.625rem] text-orange text-[1.125rem] leading-[1.688rem] font-medium underline hover:no-underline w-full after:content-[''] after:bg-arrowRed after:bg-no-repeat after:w-[6px] after:h-[10px] after:inline-block after:ml-[.5rem]  after:left-2 hover:after:translate-x-2  after:ease-out  ease-in}
+.LocatorFiltersWrap .LocatorFilters-button::after{content: ''; transition: transform .2s ease;}
+.LocatorFiltersWrap .LocatorFilters-button:hover:after{ transform: translate(0.4375rem); transition: transform .2s ease;}
+.LocatorFiltersWrap .LocatorFilters-button-apply{@apply py-[.625rem] text-xl  leading-[1.688rem] font-normal w-full  bg-orange text-white hover:bg-[#a92914]}
+
+.LocatorFiltersWrap .LocatorFilters-button-apply:hover[disabled], 
+.LocatorFiltersWrap .LocatorFilters-button-apply[disabled]{@apply bg-[#e7e7e7] text-white}
+
+.LocatorFiltersWrap .LocatorFilters-buttons button{@apply last:ml-4 } 
+.LocatorFiltersWrap .LocatorFilters-buttons button:focus{  outline: 0.125rem solid rgba(15,112,240,.6) } 
+
+.filter .LocatorFilteOuter{@apply visible opacity-100;-webkit-transition: visibility 0s linear,opacity .3s linear;
+transition: visibility 0s linear,opacity .3s linear;}
+
+.locator-footer .footerTop .footerNav .block:nth-child(3){ @apply -mt-[15px] }
+.locator-footer .footerTop .footerNav .block:nth-child(4) { @apply -mt-[15px] }
+
+
+.pac-container{@apply bg-[#f9f9f9] shadow-none}
+.pac-container .pac-item{@apply leading-7}
+.pac-container .pac-item .pac-icon-marker {@apply hidden}
+
+
+/* Media Queries for locator */ 
+
+@media screen and (max-width: 991px) {
+.locator-map-wrapper {@apply hidden;}
+.locator-footer footer > .container {@apply !max-w-full;}
+}
+
+@media screen and (max-width: 767px) {
+.location-card .location-info {@apply flex-col;}
+.location-links {@apply absolute bottom-0 left-0;}
+.location-info .info-left {@apply mb-6 mr-0;}
+.location-info .info-right {@apply mb-9 flex-row;}
+.location-row-phone .phone-link {@apply text-orange underline;}
+.info-right .location-phone {@apply order-2;}
+.locator-footer .footerTop .footerNav {@apply grid-cols-1;}
+.locator-footer .footerTop .footerNav .block{@apply text-center;}
+
+.locator-footer .footerTop .footerNav .block .socialIcons{@apply justify-center pt-3 md:pt-0}
+.locator-footer .FooterBottom .copyrightBlock .Footer-copyright{@apply text-center}
+.locator-footer .FooterBottom .copyrightBlock .partnerWrap{@apply justify-center;}
+.locator-footer .FooterBottom .FooterTablePart .Footer-tableText{@apply text-center}
+.search-wrapper .search-buttons .primaryBtn{@apply text-[.8125rem] leading-[1.54] p-2.5;}
+
+
+}
+
+@media screen and (max-width: 420px) {
+.search-bar .Error-msg{@apply w-full -bottom-14;}
+}
+
+@media screen and (min-width: 991px) {
+.locator-main-content {@apply h-[calc(100%_-_10rem)] fixed bottom-0 left-0 w-full;}
+.locator-content {@apply w-[36.625rem] relative bottom-0 overflow-y-auto h-[calc(100vh_-_140px)];}
+.result-list .result-list-item {counter-increment: resultCount;
+@apply pl-11;}
+.result-list .result-list-item::before {content: counter(resultCount, decimal);}
+}

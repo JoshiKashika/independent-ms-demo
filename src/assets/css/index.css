@@ -1,0 +1,461 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.centered-container {
+  @apply mx-auto px-5 md:px-14 max-w-screen-xl mt-8 mb-16;
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+a,
+p,
+button,
+input,
+textarea {
+  @apply font-primary;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.woff2") format("woff2"),
+    url("../fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global CSS */
+.container {@apply max-w-full md:max-w-[48rem] lg:max-w-[62rem] xl:max-w-[73.125rem] m-auto !px-6 md:!px-[0.9375rem];}
+.Text {@apply tracking-[0.00625rem];}
+body .primaryBtn {@apply py-[.625rem] px-[1.5625rem] text-white text-xl font-normal bg-orange leading-[22px] hover:bg-orangeHover;}
+.spinner-main {@apply fixed top-0 left-0 w-full h-full bg-white  bg-opacity-70 z-10}
+.spinner-main .SpinnerModal-image {@apply fixed left-2/4 top-2/4 !translate-x-2/4 !translate-y-2/4}
+
+/* BreadCrumbs */
+.BreadCrumbs {@apply md:border-t md:border-t-BorderGray w-full order-1 md:order-none;}
+.BreadCrumbs ul {@apply flex py-2 flex-wrap;}
+.BreadCrumbs ul li {@apply text-[18px] text-black font-bold py-2 inline-block after:content-['/'] after:px-[9.5px] last:after:opacity-0 after:font-normal  tracking-[0.00625rem];}
+.BreadCrumbs ul li a {@apply text-[18px] text-orange font-medium underline hover:no-underline focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm outline-none;}
+
+/* HEADER START */
+.body-wrapper {@apply flex flex-col;}
+.HeaderWrap {@apply pb-[2.438rem] md:pb-[2.2rem] lg:pb-[1.85rem] md:pt-0 pt-[2.375rem] relative inline-block w-full bg-white;}
+.HeaderWrap .HeaderInner {@apply w-full flex-wrap flex md:inline fixed -top-[100%] left-0 right-0 bg-white z-30  md:static;transition: 0.9s ease;}
+.openClass .HeaderWrap .HeaderInner {@apply top-[38px];transition: 0.96s ease;}
+
+.HeaderWrap .HeaderInner .topWrap {@apply md:mt-[33px] lg:mt-[25px]  md:flex justify-between items-center pb-4 order-2 w-full h-auto;}
+.HeaderWrap .HeaderInner .topWrap .logo {@apply hidden md:block max-w-[15.625rem] md:w-[15.625rem];}
+.HeaderWrap .HeaderInner .topWrap .logo a{@apply font-primary focus:outline-none focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm inline-block align-bottom}
+
+.HeaderWrap .HeaderInner .topWrap .topNav {}
+.HeaderWrap .HeaderInner .topWrap .topNav ul {@apply flex justify-center w-full md:justify-between md:-mr-[1px]  }
+.HeaderWrap .HeaderInner .topWrap .topNav ul li {@apply relative inline-flex items-center tracking-[0.00625rem] md:after:content-[''] md:after:h-4 md:after:w-[1px] md:after:inline-flex md:after:bg-LightGray md:after:mx-[0.75rem] last:after:mx-0 last:after:opacity-0;
+ }
+
+.HeaderWrap .HeaderInner .topWrap .topNav ul li a {@apply text-[13px] focus:underline focus:outline-none  !leading-[14px] md:text-sm text-DarkBlue uppercase md:capitalize md:text-LightGray font-bold  hover:underline py-6 px-[0.625rem]  md:py-0 md:px-0 inline-block focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm;
+ }
+
+
+.HeaderWrap .HeaderInner .mainNav {@apply w-full md:flex justify-end pt-[1px];  }
+.HeaderWrap .HeaderInner .mainNav ul {@apply w-full xl:w-2/3 md:flex justify-between;}
+.HeaderWrap .HeaderInner .mainNav ul li {@apply border-b border-b-BorderGray first:border-t first:border-t-BorderGray md:border-none md:first:border-none;}
+.HeaderWrap .HeaderInner .mainNav ul li a {@apply text-xl md:text-[1.063rem] font-bold text-DarkBlue md:border-b-[5px] md:border-b-white md:hover:border-b-orange md:pb-[7px] tracking-[0.1px] 
+uppercase py-3 px-5 block md:inline-block md:py-0 md:px-0 leading-[1.25]  lg:pt-[17px];}
+
+.HeaderWrap .HeaderInner .mainNav ul li a:focus {outline: 0.125rem solid rgb(15 112 240 / 60%);}
+
+/* Hero Banner */
+
+.HeroBannerBG {@apply w-full pt-[6.5625rem] md:py-[3.125rem] bg-DarkBlue bg-center relative z-[1] after:content-[''] after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:-z-[1] after:bg-[rgba(41,54,81,.7)];}
+/* .HeroBannerBG:after {
+background-image: linear-gradient(-90deg, rgba(36, 47, 71, 0), #293651);
+} */
+
+/* CSS Added 26-05-23 */
+
+.hero-background,
+.hero-overlay {@apply absolute top-0 left-0 w-full h-[14.8125rem] md:h-full;}
+.hero-bg-image {@apply w-full h-full inline-block max-w-full max-h-full bg-no-repeat bg-clip-content overflow-hidden;}
+
+.HeroBannerBG .hero-outer-container {@apply flex flex-col relative;}
+.HeroBannerBG .HeroWrap.hero-buttons {@apply order-1 md:order-none;}
+.HeroBannerBG .HeroWrap {@apply text-center md:text-left;}
+.HeroBannerBG .HeroWrap .HeroName {@apply mb-[1.4rem] md:mb-0;}
+.HeroBannerBG .HeroWrap .HeroName .LocationName-brand {@apply text-[1.375rem] md:text-2xl text-white font-bold leading-6 md:leading-[1.625rem]  tracking-[0.00625rem] pb-[.625rem] inline-block w-full;}
+.HeroBannerBG .HeroWrap .HeroName .LocationName-geo {@apply text-[1.75rem] md:text-[2.8125rem] leading-[1.875rem] md:leading-[1.11] text-white font-bold inline-block w-full;}
+
+.HeroBannerBG .HeroWrap .Hero-cta {@apply mt-4 inline-block w-full md:w-auto  md:px-0;}
+.HeroBannerBG .HeroWrap .Hero-cta .primaryBtn {@apply inline-block mr-4 w-full md:w-auto first:mb-4 first:md:mb-0  tracking-[0.00625rem];}
+
+.HeroBannerBG .Hero-info {@apply mt-6 md:mt-[1.875rem] flex flex-col md:flex-row items-start -mx-6 md:mx-0;-webkit-box-orient: horizontal;-webkit-box-direction: normal;}
+.HeroBannerBG .Hero-info .Hero-infoCard {@apply text-lg bg-whiteLight py-8 md:py-[2.375rem] px-[1.5rem] md:px-[1.25rem] mb-4 md:mb-0 md:mr-4 ;}
+.HeroBannerBG .Hero-info .Hero-infoCard .Teaser-address{@apply  before:w-[0.8125rem] before:mr-[0.9375rem] before:h-[1.125rem] before:inline-block before:mt-[3px] before:ml-[3px]}
+.HeroBannerBG .Hero-info .Hero-infoCard .block {@apply flex;}
+.HeroBannerBG .Hero-info .Hero-infoCard .routingIcon {@apply mb-[1px];}
+.HeroBannerBG .Hero-info .Hero-infoCard .block:not(:last-child) {@apply mb-[17px] mt-4}
+.HeroBannerBG .Hero-info .Hero-infoCard .block .icon {@apply w-[31px] min-w-[31px];}
+.HeroBannerBG .Hero-info .Hero-infoCard .block .icon svg {@apply w-[18px];}
+.HeroBannerBG .Hero-info .Hero-infoCard .block .content {@apply text-[18px] leading-[27px] font-normal text-black  tracking-[0.00625rem] -m-[1px];}
+
+.HeroBannerBG .Hero-info .Hero-hours {@apply  lg:w-[18.313rem] my-4 md:my-0 pr-[2.375rem] md:pr-4 pl-6 md:pl-4 ;}
+.HeroBannerBG .Hero-info .Hero-hours .Hero-hoursTitle {@apply text-2xl leading-[1.625rem] text-white font-bold pb-5  tracking-[0.00625rem];}
+.HeroBannerBG .Hero-info .Hero-hours .Hours-status {@apply text-[18px] leading-[1.688rem] text-white font-normal hidden md:block;}
+.HeroBannerBG .Hero-info .Hero-hours .Hours-status .hours-info {@apply tracking-[0.00625rem];}
+.HeroBannerBG .hero-hours-mobile.lobby-hours {@apply mb-2;}
+.HeroBannerBG .hero-hours-mobile .Hours-status {@apply text-[18px] leading-[1.688rem] text-white font-normal tracking-[0.00625rem];}
+.HeroBannerBG .hero-hours-mobile .Hero-hoursTitle {@apply text-[18px] leading-[1.688rem] text-white font-bold tracking-[0.00625rem];}
+.HeroBannerBG .Hero-info .Hero-hours .Hours-status .Hours-current {@apply font-bold;}
+
+.c-hours-additional-text{@apply mt-[.5rem] text-white text-[13px] leading-5}    
+
+
+
+.HeroBannerBG .hero-hours-mobile .Hours-status .Hours-current {@apply font-bold;}
+.HeroBannerBG .Hero-info .Hero-hours .Separator {}
+.HeroBannerBG .Hero-info .Hero-hours .HoursInterval-time {}
+.HeroBannerBG .Hero-info .Hero-hours .HoursInterval-day {}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details {@apply w-full md:mt-5;}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details .reopen-date{@apply text-white text-[13px]}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details tr {@apply flex justify-between;}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details tr td.title {}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details tr td {@apply text-[13px] py-0 text-white leading-5 pl-0 pr-0  tracking-[0.00625rem];}
+
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details tbody:first-child tr td {@apply font-bold;}
+.HeroBannerBG .Hero-info .Hero-hours .c-hours-details tr td .dash {@apply w-[11px] inline-block text-center;}
+
+.findATM {@apply mt-[1.875rem] text-lg leading-[1.5] tracking-[0.00625rem] text-white}
+.findATM p a {@apply underline ml-[0.375rem] hover:no-underline }
+
+.AtThisLocation {@apply bg-[#293651] py-10 text-white text-lg md:text-[13px];}
+.AtThisLocation-title {@apply text-[1.625rem] leading-[1.08] md:text-4xl md:leading-[1.11] font-bold mb-5  tracking-[0.00625rem];}
+.AtThisLocation-row {@apply -mx-[.9375rem] flex flex-wrap flex-col md:flex-row;}
+.AtThisLocation-row .col {@apply px-4 md:px-[.9375rem] w-full md:w-2/4 lg:w-1/4 mb-8 md:mb-4 lg:mb-0 last:mb-0;}
+.AtThisLocation-phonesCol.col {@apply md:mt-2 lg:mt-0;}
+
+.AtThisLocation-offeringsTitle,
+.AtThisLocation-phoneTitle,
+.AtThisLocation-servicesTitle {@apply text-2xl leading-[1.625rem] md:text-[1.3125rem] md:leading-[1.1] font-bold mb-5 tracking-[0.00625rem];}
+.AtThisLocation-servicesTitle.l-hidden-xs {@apply hidden md:block tracking-[0.00625rem];}
+
+.AtThisLocation-phoneContainer .AtThisLocation-phoneTitle {@apply mb-4;}
+
+.AtThisLocation-offeringsList,
+.AtThisLocation-servicesList {@apply pl-[.9375rem];}
+.AtThisLocation-offering,
+.AtThisLocation-service {@apply mb-[0.9375rem] md:mb-2 list-disc leading-[27px] md:leading-[1.25rem] tracking-[0.00625rem];}
+.AtThisLocation-offering a,
+.AtThisLocation-service a{@apply focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm focus:outline-none}
+.AtThisLocation-offeringLink,
+.AtThisLocation-serviceLink {@apply underline hover:no-underline;}
+
+.AtThisLocation-phoneWrapper {@apply flex flex-col md:flex-row;}
+.AtThisLocation-phoneContainer:not(:last-child) {@apply mb-[1.563rem];}
+.AtThisLocation-phoneWrapper:not(:last-child) {@apply mb-[13px];}
+.AtThisLocation-phone {@apply flex items-center;}
+.AtThisLocation-phone { @apply before:bg-phonewhite before:bg-contain before:bg-no-repeat before:w-[1.125rem] before:h-[1.125rem] before:content-[''] before:inline-block before:shrink-0 before:mr-[0.75rem];}
+/* CSS added 26-05-23 */
+.hero-overlay {
+  background-image: linear-gradient(-90deg, rgba(36, 47, 71, 0), #293651);
+  background-color: rgba(41,54,81,.7);
+}
+.AtThisLocation-phoneContainer .Phone-text {@apply text-lg md:text-[.8125rem] md:leading-[1.54] text-white font-primary font-medium md:font-normal underline md:no-underline;}
+.AtThisLocation-phoneContainer .Phone-link,
+.AtThisLocation-phoneContainer .Phone-text {@apply text-white underline md:no-underline md:font-normal ;}
+.AtThisLocation-phoneContainer .AtThisLocation-phoneHoursWrapper {@apply mb-2 tracking-[0.00625rem] lg:relative lg:-top-[1px];}
+.AtThisLocation-phoneHoursLabel,
+.AtThisLocation-phoneLabel {
+@apply font-bold pr-3 tracking-[0.00625rem] block md:inline-block mb-[6px] md:mb-0;}
+
+.Advisors {  @apply p-0 pb-[3.125rem] bg-[#293651];}
+.Advisors-list {  @apply flex flex-wrap flex-col md:flex-row -mx-[.9375rem] -my-4 px-[12.2px] md:px-0;}
+.Advisors-list .Teaser {  @apply w-full md:w-1/2 px-[.9375rem] py-4 lg:-mt-1;}
+.Teaser--advisor .Teaser-specialty {  @apply text-[.8125rem] leading-[1.54] font-primary text-white font-bold bg-[#6d6e71] p-1 text-center tracking-[0.00625rem];}
+.Teaser--advisor .Teaser-container {  @apply flex min-h-[13.125rem] md:min-h-[17.1875rem] lg:min-h-[15.625rem];}
+.Teaser--advisor .Teaser-image {  @apply w-[13.125rem] h-[13.188rem] md:w-[17.1875rem] md:h-[17.1875rem] lg:w-[15.625rem] lg:h-[17rem] bg-cover;}
+.ObjectFit-container {  @apply inline-block max-w-full max-h-full overflow-hidden;}
+.ObjectFit-image {  @apply block min-h-[100%] object-cover object-center;}
+.Teaser--advisor .Teaser-infoWrapper {  @apply bg-white p-4 xl:p-[1.875rem] w-full;}
+.Teaser--advisor .Teaser-infoWrapper .Teaser-phone:before {  @apply w-[0.75rem] h-[0.75rem] bg-contain mr-2 mt-0;}
+.Teaser--advisor .Teaser-infoWrapper .Teaser-phone {  @apply mb-0;}
+.Teaser--advisor .Teaser-title {  @apply font-primary font-bold  text-[19px] leading-[20px] md:text-[1.3125rem] md:leading-[1.1] text-[#242f47] tracking-[0.00625rem];}
+.Teaser--advisor .Teaser-subtitle {  @apply mt-2 text-[0.813rem] leading-[1.25rem] lg:text-[1.125rem] lg:leading-[1.688rem] tracking-[0.00625rem];}
+.Teaser--advisor .Teaser-linksContainer {  @apply text-[.8125rem] leading-[1.54] font-primary text-black flex flex-col items-start mt-4;}
+.Teaser-address,
+.Teaser-phone {  @apply flex items-center tracking-[0.00625rem] mb-[0.9375rem];}
+.Teaser-phone .Phone-numberWrapper .Phone-display a {  @apply text-orange underline md:text-black lg:no-underline font-medium md:font-normal relative top-[-1px];}
+.Teaser-phone .Phone.Phone--main {@apply -mt-[1px]}
+
+.Teaser-phone .Phone.Phone--main .Phone-numberWrapper{}
+
+
+.Teaser-phone {@apply before:bg-phoneBlue before:content-[''] before:bg-no-repeat before:w-[1.125rem] before:h-[1.125rem] before:inline-block before:shrink-0 before:mr-3 before:-mt-[2px];}
+.Teaser--advisor .Teaser-linksContainer > :not(:last-child) {@apply mb-2 xl:mb-2 xl:mr-4;}
+.Teaser--advisor .Teaser-linksContainer .Phone-text {@apply text-[.8125rem] leading-[1.54] font-medium md:font-primary text-orange md:text-black underline md:no-underline  md:font-normal;}
+.Teaser-phone .Phone-link {@apply underline text-[#ce4a36] font-medium;}
+.Teaser--advisor .Teaser-email {@apply underline text-[#ce4a36] font-medium hover:no-underline tracking-[0.00625rem];}
+.Teaser--advisor .Teaser-emailWrapper {@apply before:bg-mailBlue before:bg-contain before:bg-no-repeat before:content-[''] before:w-[0.75rem] before:h-[0.625rem] before:inline-block before:shrink-0 before:mr-2;}
+.l-visible-only-xs {@apply hidden;}
+
+.Teaser--advisor .Teaser-ctaWrapper .primaryBtn {@apply inline-block mt-6 w-full text-center md:w-auto tracking-[0.00625rem];}
+
+.Promo {@apply py-8 md:py-[3.125rem] bg-LightGray;}
+.Promo .PromoWrapper {@apply flex justify-between;}
+.Promo .PromoWrapper .Promo-info {@apply lg:pr-8;}
+.Promo .PromoWrapper .Promo-info .Promo-title {@apply text-[1.625rem] leading-[1.75rem] md:text-4xl mb-8 md:mb-10 text-white font-bold tracking-[0.00625rem]}
+.Promo .PromoWrapper .Promo-info .Promo-subtitle {@apply text-lg md:text-2xl leading-[27px] md:leading-[1.5] tracking-[.00625rem] text-white font-bold md:font-normal mb-4;}
+.Promo .PromoWrapper .Promo-info .primaryBtn {@apply mt-4 inline-block;}
+.Promo .PromoWrapper .Promo-image {@apply hidden lg:block min-w-[28.5625rem]}
+.Promo .PromoWrapper .Promo-image img {@apply shrink-0 w-[28.5625rem] h-64 object-cover;}
+
+.Products {@apply py-8 md:py-[3.125rem] bg-DarkBlue;}
+.Products .Products-container {}
+.Products .Products-container .Products-title {@apply text-[1.625rem] leading-7 md:text-4xl mb-10 text-white font-bold}
+.Products .Products-container .Products-list {@apply flex flex-col md:grid md:grid-cols-3 gap-[3.125rem] md:gap-8;}
+.Products .Products-container .Products-list .Products-listItem {}
+.Products .Products-container .Products-list .Products-listItem .Product-title {@apply text-LightBlue text-[1.3125rem] font-bold leading-[1.1] mb-4}
+.Products .Products-container .Products-list .Products-listItem .Product-description {@apply text-[18px] leading-[27px] text-white font-normal tracking-[0.00625rem];}
+.Products .Products-container .Products-list .Products-listItem .primaryBtn {@apply mt-4 inline-block tracking-[0.00625rem];}
+
+.Services {@apply py-8 md:py-[3.125rem] px-0 bg-[#eee] md:bg-[#6d6e71];}
+.Services-title {@apply text-[1.625rem] leading-7 md:text-4xl text-black md:text-white mb-8 md:mb-10 font-bold tracking-[0.00625rem];}
+
+.l-row {@apply flex flex-wrap -mx-[.9375rem];}
+.Services-list {@apply -m-4;}
+.Services-listItem {@apply p-4 w-full md:w-2/4 lg:w-1/3;}
+.Service {@apply flex;}
+.Service-image {@apply w-[4.6875rem] h-[4.6875rem] md:w-[7.4375rem] md:h-[7.4375rem] shrink-0}
+.Service-infoWrapper--padding {@apply pl-9;}
+.Service-title {@apply text-[1.188rem] leading-5 md:text-[1.3125rem] md:leading-[1.1] text-DarkBlue md:text-white font-bold mb-4 tracking-[0.00625rem];}
+.Service-description {@apply text-[13px] leading-5 md:text-[1.125rem] md:leading-[1.5] font-primary tracking-[.00625rem] text-black md:text-white;}
+
+.App {@apply md:py-[1.375rem] md:pb-[3.125rem] px-[0.3.125rem] bg-[#eee] md:bg-[#6d6e71];}
+.App-card {  @apply relative flex overflow-hidden md:pt-8 -mx-[15px] md:mx-0;}
+.App-infoContainer { @apply px-[1.5rem] flex-row lg:flex md:py-[3.125rem] md:pr-[28.125rem] md:pl-[3.125rem] bg-[#eee] max-w-full lg:pb-[3.625rem];}
+.App-card .App-logo { @apply w-[4.5rem] h-[4.5rem] mr-8 mb-8 hidden md:block shrink-0}
+
+.App-infoWrapper .App-titleRow .App-logo {@apply block mb-0 md:hidden}
+.App-phoneImageWrapper {@apply md:absolute text-center md:flex items-start justify-end pointer-events-none bottom-0 xl:bottom-auto xl:top-0 right-6 xl:right-[3.125rem] mt-0;}
+
+.App-phoneImage {@apply h-[26.0625rem] max-h-[none];}
+
+.App-titleRow {@apply flex items-center mb-[1.875rem];}
+.App-logo {
+@apply w-[4.5rem] h-[4.5rem] mr-8;flex-shrink: 0;}
+.l-visible-only-xs {@apply hidden;}
+.App-title {
+@apply font-primary font-bold text-[1.5rem] leading-[1.08] text-black tracking-[0.00625rem];}
+.App-description {@apply text-[1.5rem] leading-[1.5] font-primary tracking-[.00625rem] text-black;}
+.App-linksContainer {
+@apply flex items-center mt-8 md:mt-[3.125rem] justify-center md:justify-start md:max-w-[23.78rem];}
+.App-appLink:not(:last-child) {@apply mr-4;}
+.App-linksContainer .App-appLinkImage {}
+
+.focusable {@apply absolute w-[.0625rem] h-[.0625rem]  tracking-[0.00625rem] p-0 -m-[.0625rem] overflow-hidden border-none top-0 left-0 whitespace-nowrap text-black bg-white !outline-none leading-[27px] text-[18px];
+clip: rect(0, 0, 0, 0);}
+
+.focusable:active, 
+.focusable:focus { @apply static w-auto h-auto m-0 overflow-visible}  
+
+.l-visible-only-xs {@apply hidden;}   
+
+.Nearby {@apply bg-[#293651] bg-[linear-gradient(180deg,#293651,transparent),url('../images/home-bg-pattern.svg')] py-8 md:pt-[4rem] md:pb-[3.125rem];}
+.Nearby--ace .Nearby-row {@apply flex flex-wrap}
+.Nearby--ace .Nearby-title {@apply font-primary font-bold text-white text-[1.625rem] leading-7 md:text-4xl mb-10 text-left pl-[0.938rem] tracking-[0.00625rem];}
+
+.Nearby--ace .Nearby-linkWrapper {@apply w-full text-center}
+.Nearby-link {@apply text-[1.25rem] leading-[1.1] tracking-[0.00625rem] inline-flex items-center justify-center text-center py-2.5 px-[1.5625rem] text-white bg-[#ce4a36] md:mt-5 lg:mt-[3.125rem] hover:bg-orangeHover;}
+a:focus,.Nearby-link:focus {outline: 0.125rem solid rgba(15, 112, 240, 0.6);}
+
+.Nearby--ace .Nearby-row {@apply flex flex-wrap my-0 md:-mx-[.9375rem]}
+.Nearby--ace .Nearby-loc { @apply w-full md:w-1/2 lg:w-1/3 md:px-[.9375rem];}
+.Nearby--ace .Nearby-row--widen .Nearby-loc {@apply text-[18px] mb-5 md:mb-[1.875rem] lg:mb-0 p-0 md:p-[0.9375rem] !pt-0 ;-webkit-box-flex: 1;-ms-flex-positive: 1;
+flex-grow: initial;-ms-flex-negative: 1;flex-shrink: initial;-ms-flex-preferred-size: 0%;}
+.Nearby--ace .Nearby-row .Nearby-linkWrapper{@apply mt-[10px] md:mt-0}
+
+/* CSS Added 26-05-23 */
+.Nearby--ace.cityPageWrap .Nearby-loc{@apply mb-[1.125rem] md:mb-[0.938rem];}
+.Nearby.cityPageWrap .dm-loc-list{@apply md:pb-[1.3rem] bg-[#293651] bg-[linear-gradient(180deg,#293651,transparent_55%),url('../images/home-bg-pattern.svg')];}
+.Nearby.cityPageWrap .dm-loc-list .container{  @apply md:!px-0;}
+.Teaser.Teaser--custom {  @apply bg-white p-6 md:p-[3.125rem] h-full tracking-[0.00625rem];}
+.Teaser--custom .Teaser-title {  @apply font-primary font-bold text-[1.375rem] leading-[1.2] md:text-[1.5rem] md:leading-[1.08] text-[#293651] mb-4;}
+.Teaser--custom .Teaser-titleLink {  @apply flex items-center tracking-[0.00625rem] focus-visible:outline-2 focus-visible:outline-outlineBlack focus-visible:outline focus-visible:rounded-sm outline-none;}
+.Teaser--custom .Teaser-titleLink { @apply after:bg-arrow after:bg-contain after:bg-no-repeat after:w-[0.4375rem] after:h-[0.6875rem] after:inline-block after:shrink-0 after:ml-2 after:-mt-[1px]}
+.Teaser--custom .Teaser-open { @apply mb-[1.875rem];}
+.Teaser--custom .Teaser-open .Hours-current {@apply font-bold text-black tracking-[0.00625rem]}
+.c-hours-today {@apply block}
+.Teaser--custom .Teaser-phone {@apply mb-4}
+.Teaser--custom .Teaser-phone .Phone-numberWrapper span.Phone-text {@apply text-orange md:text-black underline md:no-underline font-medium md:font-normal}
+.Teaser--custom .Teaser-atm {@apply flex items-center mb-4}
+.Teaser--custom .Teaser-atm {@apply before:bg-dollorBlue before:bg-contain before:bg-no-repeat before:content-[''] before:w-[1.125rem] before:h-[1.125rem] before:inline-block before:shrink-0 before:mr-[0.6875rem]}
+
+.Phone-linkWrapper {@apply hidden}
+.Teaser-phone .Phone-link {@apply underline text-[#ce4a36] font-medium}
+.Teaser-address {@apply items-start not-italic mb-[0.9375rem]}
+.Teaser-address address {@apply not-italic text-[1.125rem] leading-[1.688rem] tracking-[0.00625rem]}
+
+.Teaser-address address .c-AddressRow {}
+.Teaser--custom .Teaser-address {@apply mb-2}
+.Teaser--custom .Teaser-address address {@apply not-italic}
+.Teaser--custom .Teaser-links {@apply ml-[1.8125rem]}
+
+
+.Teaser-address:before {@apply bg-placeBlue bg-contain bg-no-repeat content-[''] inline-block h-[1.125rem] flex-shrink-0 mt-[5px] w-[12.5px] ml-[2px] mr-[14px] }
+.Teaser--custom .Teaser-links .c-get-directions-button {@apply underline text-[#ce4a36] font-medium items-center active:text-black active:before:text-black;}
+
+.Teaser--custom .Teaser-links .c-get-directions-button {
+@apply after:bg-arrowRed after:bg-contain after:bg-no-repeat after:content-[''] after:w-[0.34375rem] after:h-[0.5625rem] after:inline-block after:shrink-0 after:ml-2 after:transition hover:no-underline;
+}
+.Teaser--custom .Teaser-links .c-get-directions-button:active:after{@apply bg-chevronBlack bg-no-repeat bg-contain w-[0.34375rem] h-[0.5625rem] inline-block shrink-0 ml-2 transition}
+
+.Teaser--custom .Teaser-links .c-get-directions-button:hover:after {
+transform: translate(0.4375rem);
+transition: transform 0.2s ease;
+}
+abbr,
+abbr[title] {@apply no-underline border-b-0;}
+
+/* Footer start */
+footer {
+@apply order-2 md:order-none shrink-0 border-t border-t-orange pt-10}
+.footerTop {@apply md:flex justify-between pb-[31px]  border-b border-b-BorderGray tracking-[.00625rem] md:text-left text-center}
+.footerTop .footerLogo {@apply m-auto md:pr-[3.5625rem] max-w-[15.625rem] md:max-w-[307px] md:mt-1 md:pb-0 pb-8}
+
+.footerTop .footerNav { @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full flex-wrap}
+.footerTop .footerNav .block {@apply w-full px-7 md:px-0;}
+.footerTop .footerNav .block h3 {@apply text-xl leading-[24px] text-DarkBlue  uppercase pb-1 border-b border-b-BorderGray mb-[13.500px] tracking-[.00625rem];font-weight: 500;}
+.footerTop .footerNav .block ul {}
+.footerTop .footerNav .block ul li {@apply leading-[20.94px];}
+.footerTop .footerNav .block ul li a {@apply text-[13px] font-normal text-LightGray tracking-[.00625rem] py-[.21875rem] pt-0 focus:outline-none hover:text-orange w-full inline-block md:w-auto md:inline }
+
+.footerTop .footerNav .block .socialIcons {@apply flex justify-center md:justify-start ml-4 md:ml-0 relative top-[1px];}
+.footerTop .footerNav .block .socialIcons a {@apply mt-6 md:mt-[.6875rem] mr-4 w-8 h-8 lg:last:mr-0;}
+.footerTop .footerNav .block .socialIcons svg {  @apply w-8 h-8 text-orange hover:text-orangeHover;}
+.footerTop .footerNav .block .socialIcons a:first-child svg {  @apply w-[31px] inline-block;}
+.footerTop .footerNav .block .socialIcons a:last-child svg {  @apply w-[28px] inline-block ml-[2px] -mt-[1px];}
+
+.FooterBottom {@apply py-10 md:flex flex-wrap tracking-[.00625rem] text-center md:text-left;}
+.FooterBottom .copyrightBlock {@apply md:w-[41.66667%] md:pr-5 lg:pb-[6px];}
+.FooterBottom .copyrightBlock .Footer-nmls {@apply text-[13px] leading-5 font-normal text-DarkBlue tracking-[.00625rem];}
+.FooterBottom .copyrightBlock .Footer-copyright {@apply text-[13px] leading-5 font-normal text-DarkBlue pb-5 pt-5 md:pt-0 tracking-[.00625rem];}
+.FooterBottom .copyrightBlock .partnerWrap {@apply justify-center md:justify-start mb-[1.875rem] md:mb-0 ml-2.5 md:ml-0;display: -webkit-box;
+display: -ms-flexbox;display: flex;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;}
+.FooterBottom .copyrightBlock .partnerWrap .parterLogo {@apply mr-[.5rem] w-24 md:w-auto;}
+.FooterBottom .copyrightBlock .partnerWrap .parterLogo:nth-child(1) {@apply w-[6.1875rem];}
+.FooterBottom .copyrightBlock .partnerWrap .parterLogo:nth-child(1) img {@apply md:!w-[99px] md:h-[1.725rem];}
+.FooterBottom .copyrightBlock .partnerWrap .parterLogo:nth-child(2) {@apply w-[3.125rem];}
+.FooterBottom .copyrightBlock .partnerWrap .parterLogo:nth-child(3) {@apply max-w-[60px];}
+
+.FooterBottom .FooterTablePart {@apply md:w-[58.33333%] md:pl-[0.781rem];}
+.FooterBottom .FooterTablePart .Footer-tableText {@apply text-[13px] leading-5 font-normal text-DarkBlue pb-5;}
+.FooterBottom .FooterTablePart .Footer-table {@apply border-l border-l-grayOther  border-t border-t-grayOther text-center}
+.FooterBottom .FooterTablePart .Footer-table tr {}
+.FooterBottom .FooterTablePart .Footer-table tr td {@apply text-[13px] leading-5 font-normal text-DarkBlue p-[.3125rem] border-b border-b-grayOther border-r border-r-grayOther w-1/3 tracking-[.00625rem];}
+
+/* Header responsive */
+.toggle-open-text,
+.toggle-close-text {@apply text-[0.75rem] leading-none font-bold text-[#6d6e71] absolute;}
+
+.Header-toggle-icon {@apply relative h-[.9375rem] w-[1.0625rem] bg-none top-[5px] -left-[8px];}
+.Header-toggle-icon .menuBarToggle {@apply w-[17px] h-[17px] inline-block text-center;}
+
+.Header-menuBar {@apply absolute block left-[8px] h-[.1875rem] w-full bg-orange rounded-none opacity-100 rotate-0 transition-all duration-300 ease-in-out;}
+.Header-menuBar {@apply first:top-0;}
+.Header-menuBar:nth-child(1) {@apply top-[0];}
+.Header-menuBar:nth-child(2),
+.Header-menuBar:nth-child(3) {@apply top-[0.375rem];}
+.Header-menuBar:nth-child(4) {@apply top-3;}
+.toggle-close-text {@apply hidden;}
+.openClass .toggle-close-text { @apply block fixed right-[21px] top-[13px] z-40 text-DarkBlue text-[0.8125rem];}
+.openClass .Header-menuBar:nth-child(1),
+.openClass .Header-menuBar:nth-child(4) {@apply top-2 w-0 left-[13px];}
+.openClass .Header-menuBar:nth-child(2) {@apply w-2 h-[2px] top-[9px] bg-DarkBlue rotate-45;}
+.openClass .Header-menuBar:nth-child(3) {@apply w-2 h-[2px] top-[9px] bg-DarkBlue -rotate-45;}
+.openClass .Header-menuBar{@apply left-[8px];}
+.openClass {@apply overflow-hidden before:opacity-100 before:transition-opacity before:duration-[0.6s] before:ease-in before:bg-white before:fixed before:top-0 before:left-0 before:right-0 before:bottom-0 before:z-20;}
+.openClass .Header-toggle-icon .menuBarToggle {@apply w-[8px] h-[8px] inline-block text-center fixed right-[18px] top-[10px] z-40;}
+
+.toggle-open-text {@apply top-full left-0 mt-[.1875rem];}
+
+
+/* Mobile logo */
+.header-mobile-logo {@apply inline-flex md:hidden absolute left-2/4 -translate-x-2/4;}
+.header-mobile-logo img {@apply h-[1.5625rem];}
+
+/* Mobile overlay */
+.mobile-overlay {@apply hidden fixed top-0 bottom-0 right-0 left-0 z-20 opacity-0 w-full h-full bg-white transition-opacity duration-500 ease-in-out;}
+/* casually it is hidden and has zero opacity but onclick on toggle menu button, overlay becomes block and opacity of overlay will be opacity-100  */
+/* Mobile overlay */
+
+
+@media (max-width: 767px) {
+.HeroBannerBG .Hero-info .Hero-hours{@apply w-full}
+.Phone-display--withLink{@apply hidden}
+.l-visible-only-xs{@apply block}
+.App-phoneImageWrapper .App-phoneImage {@apply !bg-contain !max-w-[17.5rem] !h-auto !w-full mt-12 inline-block;}
+.App-linksContainer .App-appLink {width: 136px;}
+.HeroBannerBG .Hero-info .Hero-infoCard{@apply w-full}
+.hero-overlay {
+background-image: -webkit-gradient(
+linear,
+left top,
+left bottom,
+from(rgba(36, 47, 71, 0)),
+to(#293651)
+);
+background-image: linear-gradient(-180deg, rgba(36, 47, 71, 0), #293651);
+background-color: rgba(41, 54, 81, 0.7);
+}
+
+.Teaser-address:before {@apply w-[13px] mt-[3px] mr-[15px]}
+.Teaser-phone:before { @apply mr-3 -mt-1 }
+
+}
+
+
+ 
